@@ -5,12 +5,7 @@ import { Component } from '@angular/core';
   styleUrls: ['app.component.scss'],
 })
 export class AppComponent {
-  public appPages = [];
+  public appPages:any = [];
   public labels = [];
   constructor() {}
 }
-
-//generate page
-//ionic generate page loading
-
-

@@ -2,14 +2,10 @@ import { NgModule } from '@angular/core';
 import { PreloadAllModules, RouterModule, Routes } from '@angular/router';
 
 const routes: Routes = [
+  {path:'', redirectTo:'loading', pathMatch:'full'},
   {
-    path: '',
-    redirectTo: 'loading',
-    pathMatch: 'full'
-  },
-  {
-    path: 'loading',
-    loadChildren: () => import('./screens/loading/loading.module').then( m => m.LoadingPageModule)
+   path:'loading',
+   loadChildren:()=> import('./screens/loading/loading.module').then(m=>m.LoadingPageModule)
   },
   {
     path: 'login',
@@ -34,6 +30,14 @@ const routes: Routes = [
   {
     path: 'place-order',
     loadChildren: () => import('./screens/place-order/place-order.module').then( m => m.PlaceOrderPageModule)
+  },
+  {
+    path: 'orders',
+    loadChildren: () => import('./screens/orders/orders.module').then( m => m.OrdersPageModule)
+  },
+  {
+    path: 'new-product',
+    loadChildren: () => import('./screens/new-product/new-product.module').then( m => m.NewProductPageModule)
   }
 ];
 
