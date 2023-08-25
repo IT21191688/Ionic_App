@@ -25,6 +25,7 @@ export class RegisterPage implements OnInit {
      this.userService.register(this.email, this.password).then(registerData=>{
       this.userService.createUser(this.email,this.fullName).then(userData=>{
         console.log(userData);
+        alert(userData)
        }).catch(error=>{
         console.log(error);
        });
